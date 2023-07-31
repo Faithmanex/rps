@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Alternatively, you can use the Bootstrap CSS link directly -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+</head>
+
+<body style="background-color: rgb(34, 0, 49);">
+    <div class="container mt-5">
+        <h1 style="text-align: center; color: white;">Rock Paper Scissors</h1>
+        <hr style="height: 2px; background-color: white">
+        <div style="margin: auto; display: flex;" class="">
+            <div style="margin: auto; border-radius: 30%;" class="">
+                <button style="border-radius: 0px; background-color: #00000000; border: none;"
+                    class="btn btn-primary choice-btn button" data-choice="rock"><img
+                        style="max-width: 130px;border-radius: 60px; border: solid 2px gray;"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpSkQEEjRqLVBujyY0YFclbaFPYE6vbqvBRh8VauTc&s"></button>
+            </div>
+            <div style="margin: auto;" class="">
+                <button style="border-radius: 0px; background-color: #00000000; border: none;"
+                    class="btn btn-primary choice-btn button" data-choice="paper"><img
+                        style="width: 120px;border-radius: 60px; height: 100px; border: solid 2px gray;"
+                        src="https://www.pngitem.com/pimgs/m/592-5920636_rock-paper-scissors-clipart-rock-paper-scissors-png.png"></button>
+            </div>
+            <div style="margin: auto;" class="">
+                <button style="border-radius: 0px; background-color: #00000000; border: none;"
+                    class="btn btn-primary choice-btn button" data-choice="scissors"><img
+                        style="max-width: 130px;border-radius: 60px; border: solid 2px gray;"
+                        src="https://www.seekpng.com/png/detail/111-1114370_rock-paper-scissors-rock-paper-scissors-clipart.png"></button>
+            </div>
+        </div>
+        <div style="text-align: center; color: white;" class="row mt-5">
+            <div class="col">
+                <!-- Remove the duplicate IDs -->
+                <p id="player-choice-text"></p>
+                <p id="computer-choice-text"></p>
+                <h2 id="result-text"></h2>
+                <p id="wins-text">Wins: 0</p>
+                <p id="losses-text">Losses: 0</p>
+                <p id="win-percentage-text">Win Percentage: 0%</p>
+            </div>
+        </div>
+    </div>
+    <!-- Ensure that main.js is correctly linked -->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+
+</html>
